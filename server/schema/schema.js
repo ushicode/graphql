@@ -2,6 +2,8 @@ const graphql = require('graphql');
 
 const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLInt, GraphQLList, GraphQLSchema } = graphql; //Extract GraphQLObjectType, GraphQLString and more by destructuring graphql
 const _= require('lodash')
+const Book = require("../models/book")
+const Author = require("../models/author")
 
 // dummy data
 const books = [
@@ -69,6 +71,20 @@ const RootQuery = new GraphQLObjectType({
           // code to get data from db/other source
           return _.find(authors, {id:args.id});
         },
+      },
+    //Fetch all books
+      books:{
+        type: new GraphQLList(BookType),
+        resolve(parent, args){
+            return books
+        }
+      },
+    //Fetch all authors
+    authors:{
+        type: new GraphQLList(AuthorType),
+        resolve(parent, args){
+            return authors
+        }
       }
 
   },
