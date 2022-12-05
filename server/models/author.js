@@ -2,8 +2,14 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const authorSchema = new Schema({
-    name: String,
-    age: String,
+    name:{
+        type: String,
+        required: true
+    },
+    age: {
+        type: String,
+        required: true
+    },
 })
 
 module.exports = mongoose.model("author", authorSchema)
