@@ -9,7 +9,7 @@ const connect = async () => {
       {useNewUrlParser: true }
       );
   } catch (err) {
-    console.log(`CONNECTION ERR : ${err.message}`);
+    console.log(`SERVER CONNECTION ERR : ${err.message}`);
   }
 };
 
