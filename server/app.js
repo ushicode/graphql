@@ -15,6 +15,6 @@ app.use('/graphql', graphqlHTTP({
 
 
 app.listen(4600, ()=>{
-    console.log('GraphQL Dev ✈️ Server running on PORT: 4600');
+    console.log('GraphQL Dev Server:  running on PORT: 4600');
 })
 
