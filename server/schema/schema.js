@@ -17,7 +17,8 @@ const books = [
 const authors = [
     {name:'Patrick Ries', age:44, id:'1'},
     {name:'Chimamanda Adichie', age:42, id:'2'},
-    {name:'Terry Pratchett', age:67, id:'3'}
+    {name:'Terry Pratchett', age:67, id:'3'},
+    {name:'fourth nane', age:18, id:'4'}
 ];
 
 // graphql book schema
