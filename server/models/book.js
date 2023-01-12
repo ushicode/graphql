@@ -14,5 +14,9 @@ const bookSchema = new Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String,
+        required: true
+    },
 })
 module.exports = mongoose.model("book", bookSchema)
